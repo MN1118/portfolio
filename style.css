@@ -215,6 +215,10 @@ section h2 {
     font-size: 1rem;
     color: white;
 }
+#gitt{
+    width: 100px;
+    height: 100px;
+}
 
 .skill img {
     width: 100px;
@@ -292,18 +296,21 @@ section h2 {
 }
 
 .icon {
-
     width: 100%;
     height: 17vh;
     background-color: #14141eb9;
 }
 
 .last {
+    gap: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+.last img {
+    height: 50px;
+    width: auto;
+}
 h4 {
     color: rgba(211, 211, 211, 0.681);
     text-align: center;
