@@ -12,65 +12,58 @@ html {
 body {
     background-color: #1E1E2E;
     color: white;
+    font-family: 'Poppins', sans-serif;
 
 }
+
+ 
+.name{
+    color:#ff4c60;
+    font-weight: bolder;
+    font-size: 70px;
+} 
 
 nav {
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
     background: #2c2c3e;
-    padding: 15px 0;
     z-index: 1000;
 }
 
 .navbar ul {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    font-size: 20px;
+    padding: 20px 40px;
     gap: 30px;
     list-style: none;
-
 }
 
-.navbar ul li a {
+.navbar a {
+    color: #aaa;
     text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
+    position: relative;
 }
 
-.navbar {
-
-    padding: 20px 40px;
-
+.navbar a.active,
+.navbar a:hover {
+    color: #ff4c60;
 }
 
-.navbar ul {
-    display: flex;
-    justify-content: end;
-    list-style: none;
-
+.navbar a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #ff4c60;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
 }
 
-.navbar ul li {
-    margin: 0 15px;
-    cursor: pointer;
-}
-
-.navbar ul li a {
-    font-weight: 500px;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.534);
-    font-family: 'Poppins', sans-serif;
-
-}
-
-.navbar ul li a:hover {
-    color: rgba(255, 255, 255, 0.437);
-    transition: 0.2s;
-
+.navbar a:hover::after {
+    width: 100%;
 }
 
 .int {
@@ -82,7 +75,7 @@ nav {
 
 h1 {
     font-weight: 500;
-    font-size: 5rem;
+    font-size: 4rem;
     justify-content: end;
     align-content: end;
 }
@@ -125,7 +118,7 @@ section {
 }
 
 section h2 {
-    margin: 20px 100px;
+    margin: 10px 90px;
     text-align: start;
     font-family: 'Poppins', sans-serif;
     color: #ff4c60;
@@ -215,7 +208,8 @@ section h2 {
     font-size: 1rem;
     color: white;
 }
-#gitt{
+
+#gitt {
     width: 100px;
     height: 100px;
 }
@@ -229,7 +223,7 @@ section h2 {
 }
 
 #con {
-    margin: 0;
+    margin-top: 200px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     color: #ff4c60;
@@ -261,6 +255,7 @@ section h2 {
 
 .connect input {
     background-color: #1e1e2eb6;
+    outline: none;
     width: 320px;
     height: 65px;
     margin: 10px 0;
@@ -307,10 +302,12 @@ section h2 {
     align-items: center;
     justify-content: center;
 }
+
 .last img {
     height: 50px;
     width: auto;
 }
+
 h4 {
     color: rgba(211, 211, 211, 0.681);
     text-align: center;
@@ -356,25 +353,28 @@ h4 {
 }
 
 @media (max-width: 600px) {
-    h1{
+    h1 {
         font-size: 2.5rem;
         text-align: start;
         line-height: 3rem;
 
     }
-    .intro{
+
+    .intro {
         margin: 90px 0;
         padding: 0 10px;
         text-align: start;
         justify-content: start;
     }
+
     .intro p {
-        margin: 10px 10px ;
+        margin: 10px 10px;
         padding: 0 10px;
         text-align: start;
 
         font-size: 1rem;
     }
+
     button {
         width: 500px;
         height: 50px;
@@ -383,6 +383,7 @@ h4 {
         margin: 20px auto;
         display: block;
     }
+
     .navbar ul {
         align-items: flex-end;
         gap: 10px;
